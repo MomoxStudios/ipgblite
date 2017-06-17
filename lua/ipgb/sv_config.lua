@@ -17,18 +17,18 @@ IPGB.Whitelist = IPGB.Whitelist or {}
 IPGB.Config["IPServer"] = "momoxstudios.net" -- Valid options: "donovanclan.de" or "ip-api.com" or "momoxstudios.net" 
 
 -- Kick Bad IPs | Kick IPs wich can't be traced down (Mostly local IP's)
-IPGB.Config["KickBadIP"] = false -- Valid options: true / false
+IPGB.Config["KickBadIP"] = true -- Valid options: true / false
 
 -- Reverse Whitelist | Reverse the Country Whitelist, so only Countries inside can't join the server
-IPGB.Config["ReverseWhitelist"] = true -- Valid options: true / false
+IPGB.Config["ReverseWhitelist"] = false -- Valid options: true / false
 
 -- Kick Message CC | The kick message people get when being kicked for not being whitelisted (Use \n to make a new line)
 -- Available Quick Codes: $PLAYER_NAME; $IP; $COUNTRY_CODE or $CC; $STEAMID; $CONTACT
-IPGB.Config["MSG_InvalidCC"] = "[IPGB] You have been kicked!\nYour Country ($CC) is not allowed on this server\nIf you believe this is an error, contact:\n$CONTACT"
+IPGB.Config["MSG_InvalidCC"] = "\n[IPGB] You have been kicked!\nYour Country ($CC) is not allowed on this server\nIf you believe this is an error, contact:\n$CONTACT"
 
 -- Kick Message IP | The kick message people get when being kicked for having an invalid IP (Use \n to make a new line)
 -- Available Quick Codes: $PLAYER_NAME; $IP; $COUNTRY_CODE or $CC; $STEAMID; $CONTACT
-IPGB.Config["MSG_InvalidIP"] = "[IPGB] You have been kicked!\nYour IP ($IP) is invalid!\nIf you believe this is an error, contact:\n$CONTACT"
+IPGB.Config["MSG_InvalidIP"] = "\n[IPGB] You have been kicked!\nYour IP ($IP) is invalid!\nIf you believe this is an error, contact:\n$CONTACT"
 
 -- Contact | Define the $CONTACT parameter for kick messages. Enter your Steam Profile, Website/Forum or whatever
 IPGB.Config["Contact"] = "The Server Owner"
