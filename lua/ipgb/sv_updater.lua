@@ -7,7 +7,7 @@ Note: You aren't supposed to change anything in here unless you know what to do!
 IPGB.Core = IPGB.Core or {}
 IPGB.Util = IPGB.Util or {}
 
-IPGB.Core.CurrentVersion = "1.0.0"
+IPGB.Core.CurrentVersion = "1.1.0"
 
 function IPGB.Util.UpdateCheck(ply)
 	http.Fetch( "https://raw.githubusercontent.com/MomoxStudios/IPGBlite/master/version.txt" , function(body, len, headers, code)	
