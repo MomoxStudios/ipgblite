@@ -15,12 +15,11 @@ include( "ipgb/sv_updater.lua" )
 if file.Exists( "ipgb/sv_logger.lua", "LUA" ) then include( "ipgb/sv_logger.lua" ) else print("[IPGB] Logger Module is not installed. Available on Workshop") end
 
 IPGB.LogInstalled = IPGB.LogInstalled or false
-print("Debug: "..tostring(IPGB.LogInstalled))
+if IPGB.LogInstalled then print("[IPGB] Logger Module installed and activated.") end
 
 function IPGB.Core.CheckIP( steamID64, ipAddress, svPassword, clPassword, name )
 
 	local clientIp = string.Explode(":", ipAddress)[1] --Client IP
-	print("DEBUG DEBUG DEBUG: "..clientIp)
 
 	http.Fetch( "http://ip-api.com/json/"..clientIp ,
 		function( body, len, headers, code )
