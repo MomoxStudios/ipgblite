@@ -16,3 +16,10 @@ function IPGB.Util.FormatKickMessage(msg, name, cc, ip, sid) -- QuickFormats
 	msg = string.Replace( msg, "$CONTACT", IPGB.Config["Contact"])
 	return msg
 end
+
+function IPGB.Util.FormatIPServer(url, ip)
+	if url == "ip-api.com" then return string.format("http://ip-api.com/json/%s", ip) end
+	if url == "momoxstudios.net" then return string.format("https://momoxstudios.net/IPGB/index.php/rest/geoip/resolve/%s", ip) end
+	return url
+end
+
