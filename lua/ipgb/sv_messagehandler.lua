@@ -17,13 +17,9 @@ function IPGB.Util.FormatKickMessage(msg, name, cc, ip, sid) -- QuickFormats
 	return msg
 end
 
-function IPGB.Util.FormatRestURL(url, ip) 
-	return string.Replace(IPGB.Util.FormatIPServer(url), "$IP", ip)
-end
-
-function IPGB.Util.FormatIPServer(url)
-	if url == "donovanclan.de" then return "https://www.donovanclan.de/IPGB/index.php/rest/geoip/resolve/$IP" end
-	if url == "ip-api.com" then return "http://ip-api.com/json/$IP" end
-	if url == "momoxstudios.net" then return "https://momoxstudios.net/IPGB/index.php/rest/geoip/resolve/$IP" end
+function IPGB.Util.FormatIPServer(url, ip)
+	if url == "ip-api.com" then return string.format("http://ip-api.com/json/%s", ip) end
+	if url == "momoxstudios.net" then return string.format("https://momoxstudios.net/IPGB/index.php/rest/geoip/resolve/%s", ip) end
 	return url
 end
+

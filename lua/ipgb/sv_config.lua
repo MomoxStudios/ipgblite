@@ -13,8 +13,11 @@ IPGB.Whitelist = IPGB.Whitelist or {}
 --##################### Config ######################
 --###################################################
 
--- IP-Server | Define the Server being used to trace IPS down ( GeoIP Service ) IPGB comes with 2 free/unlimited IP Servers.
-IPGB.Config["IPServer"] = "momoxstudios.net" -- Valid options: "donovanclan.de" or "ip-api.com" or "momoxstudios.net" 
+
+-- IP-Server | Define the Server being used to trace IPS down ( GeoIP Service ). Try switching to the other server if there are any issues.
+IPGB.Config["IPServer"] = "ip-api.com" 	-- Valid options: "ip-api.com" or "momoxstudios.net" 
+												-- ip-api.com = public service, 99.99% uptime but can be blocked if there are too many requests
+												-- momoxstudios.net = My private geoip api, higher capacity, however can have some downtimes.
 
 -- Kick Bad IPs | Kick IPs wich can't be traced down (Mostly local IP's)
 IPGB.Config["KickBadIP"] = true -- Valid options: true / false
@@ -41,8 +44,9 @@ IPGB.Config["Contact"] = "The Server Owner"
 IPGB.Whitelist["_countryCode"] = {"DE", "FR", "GB", "IT"} -- Has to look like this;  No Country: {} | One Country: {"DE"} | Multiple Countries: {"DE","FR","IT"}        DONT FORGET THE "" 
 
 -- SteamID Whitelist | Add SteamID's which should bypass all checks.
-IPGB.Whitelist["_steamID"] = {"STEAM_0:1:76836829"} -- Has to look like this;  No SteamID: {} | One SteamID: {"STEAM_0:1:76836829"} | Multiple Countries: {"STEAM_0:1:76836829","STEAM_0:1:23456789"}        DONT FORGET THE "" 
+IPGB.Whitelist["_steamID"] = {"STEAM_0:1:76836829"} -- Has to look like this;  No SteamID: {} | One SteamID: {"STEAM_0:1:76836829"} | Multiple Ids: {"STEAM_0:1:76836829","STEAM_0:1:23456789"}        DONT FORGET THE "" 
 
-
+-- IP Whitelist | Add IP's which should bypass all checks
+IPGB.Whitelist["_ip"] = {"123.456.789.0"}
 
 
