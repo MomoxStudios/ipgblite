@@ -10,7 +10,7 @@ IPGB.Util = IPGB.Util or {}
 IPGB.Core.CurrentVersion = "1.1.0"
 
 function IPGB.Util.UpdateCheck()
-	http.Fetch( "https://raw.githubusercontent.com/MomoxStudios/ipgblite/beta/version.json" , function(body, len, headers, code)	
+	http.Fetch( "https://raw.githubusercontent.com/MomoxStudios/ipgblite/master/version.json" , function(body, len, headers, code)	
 		local content = util.JSONToTable(body) or "ERROR"
 			if content != "ERROR" then
 				if IPGB.Core.CurrentVersion == content.version then
