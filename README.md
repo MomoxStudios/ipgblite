@@ -17,5 +17,5 @@ Support: http://steamcommunity.com/id/M0m0x/ (**LEAVE A COMMENT BEFORE ADDING ME
 - Country Whitelist
 - IP Whitelist
 
-##Installation:
+## Installation:
 Drag the "ipgblite" folder from the zip file into your addons folder.
